@@ -32,6 +32,7 @@ jobs:
         with:
           name: paper2speech-xpi
           if-no-files-found: error
+          include-hidden-files: true
           path: |
             .scaffold/build/*.xpi
             .scaffold/build/update.json
