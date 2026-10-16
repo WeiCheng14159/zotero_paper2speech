@@ -1,0 +1,60 @@
+<groupbox
+  id="paper2speech-preferences"
+  onload="Zotero.Paper2Speech.initPreferences(window)"
+>
+  <label><html:h2>Speech</html:h2></label>
+  <description
+    >Read papers aloud with the built-in macOS speech engine.</description
+  >
+  <vbox style="gap: 8px; margin-top: 16px">
+    <html:label for="paper2speech-voice">Voice</html:label>
+    <html:select
+      id="paper2speech-voice"
+      style="width: 100%; max-width: 400px"
+      disabled="disabled"
+    >
+      <html:option value="">Loading installed voices…</html:option>
+    </html:select>
+    <description
+      >System default uses your macOS speech voice. Additional voices can be
+      installed in macOS Accessibility settings.</description
+    >
+  </vbox>
+  <vbox style="gap: 8px; margin-top: 20px">
+    <html:label for="paper2speech-rate"
+      >Reading speed (words per minute)</html:label
+    >
+    <hbox align="center" style="gap: 12px">
+      <html:input
+        id="paper2speech-rate-slider"
+        type="range"
+        min="80"
+        max="450"
+        step="1"
+        aria-label="Reading speed"
+        style="width: 260px"
+      />
+      <html:input
+        id="paper2speech-rate"
+        type="number"
+        min="80"
+        max="450"
+        step="1"
+        style="width: 80px"
+        aria-describedby="paper2speech-rate-help"
+      />
+    </hbox>
+    <description id="paper2speech-rate-help"
+      >80–450 words per minute. Default: 180.</description
+    >
+  </vbox>
+  <description style="margin-top: 20px"
+    >Changes are saved automatically and apply the next time you press
+    Play.</description
+  >
+  <html:p
+    id="paper2speech-preferences-status"
+    role="status"
+    aria-live="polite"
+  ></html:p>
+</groupbox>
